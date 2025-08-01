@@ -5,6 +5,11 @@ st.set_page_config(
     layout="centered",  # Better for mobile responsiveness
 )
 
+st.markdown("""
+<!-- Force desktop view on mobile -->
+<meta name="viewport" content="width=1024">
+""", unsafe_allow_html=True)
+
 # Custom CSS to hide various elements
 hide_streamlit_elements = """
 <style>
