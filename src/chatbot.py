@@ -1,4 +1,5 @@
 import streamlit as st
+from PyPDF2 import PdfReader 
 
 st.set_page_config(
     page_title="Chatbot App",
@@ -33,3 +34,11 @@ with st.sidebar:
     st.title("Your documents")
     file = st.file_uploader("Upload your PDF file", type='pdf')
     st.markdown("Upload file and start asking questions")
+
+#Extract text from pdf file
+if file is not None:
+    file_reader = PdfReader(file)
+    text=''
+    for page in file_reader.pages:
+        text+=page.extract_text()
+        st.write(text)
