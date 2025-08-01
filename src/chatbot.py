@@ -1,5 +1,24 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="My Streamlit App",
+    layout="wide"
+)
+
+# Custom CSS to hide various elements
+hide_streamlit_elements = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+.stDeployButton {display:none;} /* Hides the Deploy button */
+.stApp [data-testid="stToolbar"] {display: none;} /* Hides the entire toolbar including share/star */
+.stApp [data-testid="stDecoration"] {display: none;} /* Hides the "Made with Streamlit" footer */
+.viewerBadge_container__1QSob {display: none;} /* Hides the "Made with Streamlit" badge */
+</style>
+"""
+st.markdown(hide_streamlit_elements, unsafe_allow_html=True)
+
 #sets header for app
 st.header("Chatbot App");
 
