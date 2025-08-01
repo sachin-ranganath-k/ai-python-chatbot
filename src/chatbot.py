@@ -20,6 +20,7 @@ header {visibility: hidden;}
 .stApp [data-testid="stToolbar"] {display: none;} /* Hides the entire toolbar including share/star */
 .stApp [data-testid="stDecoration"] {display: none;} /* Hides the "Made with Streamlit" footer */
 .viewerBadge_container__1QSob {display: none;} /* Hides the "Made with Streamlit" badge */
+._terminalButton_rix23_138 [data-testid="manage-app-button"] {display: none;}
 </style>
 """
 st.markdown(hide_streamlit_elements, unsafe_allow_html=True)
