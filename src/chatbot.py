@@ -1,8 +1,9 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="My Streamlit App",
-    layout="wide"
+    page_title="Chatbot App",
+    layout="centered",  # Better for mobile responsiveness
+    initial_sidebar_state="collapsed"  # Optional: sidebar starts closed on mobile
 )
 
 # Custom CSS to hide various elements
